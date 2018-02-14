@@ -1,7 +1,7 @@
 require "httparty"
 require "json"
-require_relative "roadmap"
-require_relative "message"
+require_relative "./kele/roadmap"
+require_relative "./kele/message"
 
 class Kele
   include HTTParty
