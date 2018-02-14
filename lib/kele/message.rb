@@ -17,8 +17,8 @@ module Message
       "authorization" => @auth_token
     }
     body = {
-      "sender": sender,#"night1300013@gmail.com",
-      "recipient_id": recipient_id,#2400043,
+      "sender": sender,
+      "recipient_id": recipient_id,
       "subject": subject,#"Royale with cheese",
       "stripped-text": stripped_text,#"That's what they call a quarter pounder in France."
     }

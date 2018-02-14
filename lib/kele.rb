@@ -2,11 +2,13 @@ require "httparty"
 require "json"
 require_relative "./kele/roadmap"
 require_relative "./kele/message"
+require_relative "./kele/submission"
 
 class Kele
   include HTTParty
   include Roadmap
   include Message
+  include Submission
 
   def initialize(email, password)
     url = api_url + "sessions"
