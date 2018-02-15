@@ -2,7 +2,7 @@ module Submission
   def create_submission(checkpoint_id, assignment_branch, assignment_commit_link, comment)
     url = "#{api_url}/checkpoint_submissions"
     headers = {
-      :authorization => @auth_token
+      "authorization" => @auth_token
     }
     body = {
       "assignment_branch": assignment_branch,
@@ -12,5 +12,6 @@ module Submission
       "enrollment_id": @me_hash["current_enrollment"]["id"],
     }
     response = self.class.post(url, body: body, headers: headers)
+    puts response
   end
 end
