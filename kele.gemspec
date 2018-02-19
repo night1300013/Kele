@@ -1,3 +1,7 @@
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'kele/version'
+
 Gem::Specification.new do |s|
   s.name          = 'kele'
   s.version       = '0.0.1'
@@ -13,4 +17,8 @@ Gem::Specification.new do |s|
   s.license       = 'MIT'
   s.add_runtime_dependency 'httpparty', '~> 0.13'
   s.add_runtime_dependency 'json', '~> 1.8'
+  s.add_development_dependency 'vcr', '~> 0'
+  s.add_development_dependency "rspec", "~> 3.0"
+  s.add_development_dependency 'webmock', '~> 0'
+  s.add_development_dependency 'dotenv', '~> 0'
 end
